@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "hn-clicker-lib": [
+        "dist/hn-clicker-lib"
+      ],
+      "hn-clicker-lib/*": [
+        "dist/hn-clicker-lib/*"
+      ]
+    }
   }
 }

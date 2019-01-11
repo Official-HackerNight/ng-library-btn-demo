@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "hn-clicker-lib": {
+      "root": "projects/hn-clicker-lib",
+      "sourceRoot": "projects/hn-clicker-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/hn-clicker-lib/tsconfig.lib.json",
+            "project": "projects/hn-clicker-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hn-clicker-lib/src/test.ts",
+            "tsConfig": "projects/hn-clicker-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/hn-clicker-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hn-clicker-lib/tsconfig.lib.json",
+              "projects/hn-clicker-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-btn-clicker-lib-demo"
